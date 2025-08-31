@@ -19,7 +19,7 @@ model = load("./Titanic_Model.joblib")
 # Default values as per your request
 pclass = st.selectbox('Passenger Class', [1, 2, 3], index=0)  # default: 1
 sex = st.selectbox('Sex', ['male', 'female'], index=0)        # default: 'male'
-age = st.number_input('Age', min_value=0.0, max_value=100.0, value=28.0)      # default: 28.0
+age = st.number_input('Age', min_value=0, max_value=100, value=28, step=1) # default: 28
 fare = st.number_input('Fare', min_value=0.0, max_value=600.0, value=99.50)   # default: 99.50
 embarked = st.selectbox('Embarked', ['S', 'C', 'Q'], index=0) # default: 'S'
 family_size = st.selectbox('Family Size', ['Alone', 'Small_Family', 'Large_Family'], index=0) # default: 'Alone'
